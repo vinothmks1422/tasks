@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+</head>
+
+<html>
+
+<body>
+    <script>
+        'use strict';
+
+// 1. find the product of this array [1,2,3,10]
+
+        const b = [1, 2, 3, 10];
+        let c = [1];
+
+        for (let i = 0; i < b.length; i++) {
+            c *= b[i];
+        }
+        console.log('PRODUCT OF ARRAY :', c);
+
+
+// 5. write a function to find uniq values from the array
+
+        const a = [1, 2, 3, 4, 2, 5, 4, 5];
+
+        function uniqValue() {
+            let b = Array.from(new Set(a));
+            return b;
+            // console.log('uniq value of this array', b);
+        }
+        console.log('COMMEN ELEMENTS :', uniqValue());
+
+
+// 4. write a function that will take array as input and return duplicate values
+
+        const d = ['nodejs', 'javascript', 'mongodb', 'sql', 'javascript', 'webstorage', 'html', 'sql'];
+        // const g = [1, 2, 4, 1, 3, 4, 3, 5];
+
+        function duplicateValue() {
+            const uniqueElements = new Set(d);
+            // console.log(uniqueElements);
+            const filteredElements = d.filter(function (item) {
+
+                // console.log(uniqueElements);
+                // console.log(item);
+
+                if (uniqueElements.has(item)) {
+                    uniqueElements.delete(item);
+                } else {
+                    uniqueElements.add(item)
+                }
+            });
+            // console.log(uniqueElements);
+            return Array.from(uniqueElements)
+        }
+        console.log('DUPLICATE ELEMENTS :', duplicateValue());
+
+// 6. write a function to find number of duplicates values from the array
+
+        const g = [1, 2, 4, 1, 3, 4, 3, 5];
+
+        function duplicates() {
+            const commenValue = new Set(g);
+            // console.log(uniqueElements);
+            const filteredElements = g.filter(function (item) {
+
+                // console.log(uniqueElements);
+                // console.log(item);
+
+                if (commenValue.has(item)) {
+                    commenValue.delete(item);
+                } else {
+                    commenValue.add(item)
+                }
+            });
+            // console.log(uniqueElements);
+            return Array.from(commenValue)
+        }
+        console.log('NO.OF DUPLICATE ELEMENTS :', duplicates().length);
+
+
+
+// 3. write a function to flatten the nested array shown below (Don't use array.flat method)
+
+
+        const z = [1, 2, 3, [4, 5, 6, [7, 8, 9], 0, [1, 2, [3]]]];
+        let x = [];
+        // method-1
+
+        function flat() {
+            console.log(x.concat(...z));
+        }
+        flat();
+
+        // let flat = x.concat(...z);
+        // console.log(flat);
+
+        // method-2
+
+        function Flat(a, b) {
+            console.log(a.concat.apply(a, b));
+        }
+        Flat([], [1, 2, 3, [4, 5, 6, [7, 8, 9], 0, [1, 2, [3]]]])
+
+        // let Flat = x.concat.apply(x, z);
+        // console.log(Flat);
+
+    </script>
+</body>
+
+</html>
