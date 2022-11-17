@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 #body {
     height: 100vh;
     display: flex;
@@ -9,26 +10,24 @@
     align-items: center;
     background-color: brown;
 }
+
 table {
     border-collapse: collapse;
     text-align: center;
-    /* background: #33FFBD; */
     border-radius: 15rem;
 }
 
 th,
 td {
-    /* border: 2px solid black; */
     padding: 0.6rem;
     background-color: rgb(211, 199, 223);
 }
+
 th {
     background-color: rgba(233, 170, 128, 0.966);
 }
-.alert {
-    cursor: pointer;
-}
+
 .alert:hover {
     background-color: rgb(87, 204, 33);
-    /* border-radius: 5px; */
+    cursor: pointer;
 }
