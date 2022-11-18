@@ -44,6 +44,3 @@ for (const xyz in myFamilyMembers) {
 
 
 }
-let pq = Object.entries(myFamilyMembers);
-console.log(pq);
-
