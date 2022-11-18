@@ -9,7 +9,7 @@ const myFamilyMembers = [
 
 // creating the table
 const table = document.createElement('TABLE');
-document.getElementById('body').appendChild(table);
+document.getElementsByTagName('body')[0].appendChild(table);
 
 // creating the table heading
 const table_row1 = document.createElement('TR');
@@ -41,4 +41,9 @@ for (const xyz in myFamilyMembers) {
         alert(data1.firstName + " " + data1.lastName);
     };
     table_row2.lastElementChild.addEventListener("click", Notification);
+
+
 }
+let pq = Object.entries(myFamilyMembers);
+console.log(pq);
+
